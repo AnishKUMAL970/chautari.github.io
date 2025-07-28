@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Terms of Service – Chautari</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion {
+            background-color: var(--card-bg, #fff);
+            color: var(--primary, #a259e6);
+            cursor: pointer;
+            padding: 1rem;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background 0.2s;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: var(--card-shadow, 0 2px 8px rgba(162, 89, 230, 0.08));
+        }
+
+        .accordion.active,
+        .accordion:hover {
+            background-color: #f3e8ff;
+        }
+
+        .panel {
+            padding: 0 1.2rem 1rem 1.2rem;
+            background-color: #faf9fd;
+            display: none;
+            overflow: hidden;
+            border-radius: 0 0 8px 8px;
+            box-shadow: var(--card-shadow, 0 2px 8px rgba(162, 89, 230, 0.08));
+        }
+
+        .panel.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="logo.png" alt="Chautari Logo">
+            <span class="navbar-title">Chautari</span>
+        </a>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="data-deletion.html">Data Deletion</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Terms of Service – Chautari</h1>
+        <p><em>These terms apply to Chautari, developed as part of a Final Year Project (FYP) to help users manage and
+                analyze their social media activity.</em></p>
+
+        <button class="accordion">1. Service Description</button>
+        <div class="panel">
+            <p>Chautari is a social media management tool that allows users to schedule posts, track analytics, and
+                manage their presence across Facebook, Instagram, LinkedIn, TikTok, and YouTube from a single dashboard.
+            </p>
+        </div>
+
+        <button class="accordion">2. User Responsibilities</button>
+        <div class="panel">
+            <ul>
+                <li>You are responsible for the content you post via Chautari.</li>
+                <li>You must follow the terms of service of all connected platforms (e.g., Facebook, LinkedIn).</li>
+                <li>Abuse, spamming, or misuse of the service may result in account deactivation.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">3. Data and Privacy</button>
+        <div class="panel">
+            <p>Chautari uses OAuth to securely connect with third-party platforms. Only essential data is accessed and
+                stored. Please see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+
+        <button class="accordion">4. Account Termination</button>
+        <div class="panel">
+            <p>You can request to delete your account and data at any time. Visit the <a href="data-deletion.html">Data
+                    Deletion</a> page for instructions.</p>
+        </div>
+
+        <button class="accordion">5. Contact & Support</button>
+        <div class="panel">
+            <p>For any queries regarding these terms or the platform, please contact us at <a
+                    href="mailto:anishkumal0202@gmail.com">anishkumal0202@gmail.com</a>.</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Chautari | <a href="privacy.html">Privacy Policy</a> | <a href="data-deletion.html">Data Deletion</a>
+            | <a href="terms.html">Terms</a></p>
+    </footer>
+    <script>
+        const acc = document.querySelectorAll('.accordion');
+        acc.forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                panel.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
