@@ -1,0 +1,175 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #a259e6;
+  --background: #f8f8ff;
+  --text: #222;
+  --nav-bg: #fff;
+  --nav-link: #a259e6;
+  --nav-link-hover: #7c3aed;
+  --card-bg: #fff;
+  --card-shadow: 0 2px 8px rgba(162,89,230,0.08);
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--nav-bg);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(162,89,230,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+}
+
+.navbar-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--nav-link);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--nav-link-hover);
+}
+
+header, .container, footer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+header {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+}
+
+.platforms {
+  margin: 2rem 0; 
+  text-align: center;
+
+}
+
+.platform-icons {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.platform {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  box-shadow: 0 1px 4px rgba(162,89,230,0.05);
+}
+
+.cta {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.cta a {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+.cta a:hover {
+  background: var(--nav-link-hover);
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+  }
+  .navbar-links {
+    margin-top: 0.5rem;
+    gap: 1rem;
+  }
+  header, .container, footer {
+    margin: 1.2rem auto;
+    padding: 0 0.5rem;
+  }
+} 
